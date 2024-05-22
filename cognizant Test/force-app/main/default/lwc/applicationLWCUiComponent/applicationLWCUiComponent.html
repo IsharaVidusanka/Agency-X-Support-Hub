@@ -1,0 +1,61 @@
+<template>
+    <lightning-card title="Grant Application Form" icon-name="custom:custom63" class="slds-m-around_medium custom-card">
+        <div class="slds-p-horizontal_medium form-container">
+            <lightning-input 
+                label="First Name" 
+                value={firstName} 
+                onchange={handleInputChange} 
+                data-id="firstName" 
+                required 
+                class="slds-m-bottom_medium">
+            </lightning-input>
+            <lightning-input 
+                label="Last Name" 
+                value={lastName} 
+                onchange={handleInputChange} 
+                data-id="lastName" 
+                required 
+                class="slds-m-bottom_medium">
+            </lightning-input>
+            <lightning-input 
+                label="Phone" 
+                value={phone} 
+                onchange={handleInputChange} 
+                data-id="phone" 
+                required 
+                class="slds-m-bottom_medium">
+            </lightning-input>
+            <lightning-input 
+                label="Postal Code" 
+                value={postalCode} 
+                onchange={handleInputChange} 
+                data-id="postalCode" 
+                required 
+                class="slds-m-bottom_medium">
+            </lightning-input>
+            <lightning-input 
+                label="Monthly Income" 
+                value={monthlyIncome} 
+                type="number" 
+                onchange={handleInputChange} 
+                data-id="monthlyIncome" 
+                required 
+                class="slds-m-bottom_medium">
+            </lightning-input>
+            <lightning-combobox 
+                label="Support Option" 
+                value={supportOption} 
+                options={supportOptions} 
+                onchange={handleInputChange} 
+                data-id="supportOption" 
+                required 
+                class="slds-m-bottom_medium">
+            </lightning-combobox>
+            <lightning-button 
+                label="Submit" 
+                onclick={handleSubmit} 
+                class="slds-m-top_medium slds-align_absolute-center">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
